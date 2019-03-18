@@ -22,10 +22,10 @@ public class FirstBlood {
 		 list.add("number three");
 		 
 		 //流水线的遍历list集合
-		 //list.stream().forEach(a->System.out.println("a="+a));
+		 list.stream().forEach(a->System.out.println("a="+a));
 		 //filter流式过滤
-		  Stream.of(list).filter(i->i.contains("two"))
-				 .forEach(System.out::println);
+		 Stream s= Stream.of(list).filter(i->i.contains("two"))
+				 .forEach(System.out::println);;
 		 
 		 Map map=new HashMap();
 		 map.put("k1", "v1");

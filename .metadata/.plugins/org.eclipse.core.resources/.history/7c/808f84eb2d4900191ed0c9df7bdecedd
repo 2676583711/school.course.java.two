@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.stream.Stream;
 
 /*
  * 测试jdk8新特性stream流式聚合操作
@@ -22,10 +21,10 @@ public class FirstBlood {
 		 list.add("number three");
 		 
 		 //流水线的遍历list集合
-		 //list.stream().forEach(a->System.out.println("a="+a));
+		 list.stream().forEach(a->System.out.println("a="+a));
 		 //filter流式过滤
-		  Stream.of(list).filter(i->i.contains("two"))
-				 .forEach(System.out::println);
+		 list.stream().filter(i->i.s ("two"))
+		 .forEach(i->System.out.println("a2="+i));
 		 
 		 Map map=new HashMap();
 		 map.put("k1", "v1");
