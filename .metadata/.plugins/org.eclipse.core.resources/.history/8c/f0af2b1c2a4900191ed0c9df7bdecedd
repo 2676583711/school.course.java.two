@@ -1,0 +1,12 @@
+package cn.zhou.stream.accidence;
+
+
+/*
+ * 测试stream流式，聚合操作
+ */
+public class FirstBlood {
+
+	public static void main(String[] args) {
+		
+	}
+}

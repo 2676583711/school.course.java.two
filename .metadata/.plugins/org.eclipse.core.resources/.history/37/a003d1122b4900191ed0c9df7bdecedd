@@ -1,0 +1,32 @@
+package cn.zhou.stream.accidence;
+
+import java.util.ArrayList;
+import java.util.List;
+
+/*
+ * 测试jdk8新特性stream流式聚合操作
+ * 
+ * 结合lambda表达式简化数组以及集合的便利操作
+ * 
+ * java.util.stream.Stream
+ */
+public class FirstBlood {
+
+	public static void main(String[] args) {
+		 List list =new ArrayList();
+		 list.add("number one");
+		 list.add("number two");
+		 list.add("number three");
+		 
+		 
+	}
+}
+
+
+
+
+
+
+
+
+

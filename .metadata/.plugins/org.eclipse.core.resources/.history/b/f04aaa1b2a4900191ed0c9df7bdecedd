@@ -1,0 +1,8 @@
+package cn.zhou.stream.accidence;
+
+public class FirstBlood {
+
+	public static void main(String[] args) {
+		
+	}
+}
