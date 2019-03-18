@@ -1,4 +1,4 @@
-public class Example15 {
+public class Example15 implements Fish {
 
 	public static void main(String[] args) {
 		Animal c = new Cat();
@@ -12,19 +12,24 @@ public class Example15 {
 		System.out.println("a=" + c.a + ":" + c2.a);
 
 		System.out.println("b=" + c.b);
-
+		Example15 e = new Example15();
+		e.a();
+		e.b();
+		e.c();
 	}
 }
 
 // abstract class
 abstract class Animal {
-	//public String a;
-	
+	// public String a;
+
 	public static final String a = "null";
-	
-	//final int a = 5;
+
+	// final int a = 5;
 	float b = 20f;
 
+	// 方法注释之后，erros:The method shout() of type Cat must override or implement a
+	// supertype method
 	public abstract void shout();
 
 	public void say() {
@@ -64,4 +69,21 @@ class Dog extends Animal {
 
 	}
 
+}
+
+// 在接口中测试default关键字
+interface Fish {
+	default void a() {
+		System.out.println("interface fish.a method");
+	}
+
+	default void b() {
+		System.out.println("interface fish.b method");
+
+	}
+
+	default void c() {
+		System.out.println("interface fish.c method");
+
+	}
 }
