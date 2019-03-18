@@ -1,0 +1,26 @@
+package cn.zhou.stream.accidence;
+
+public class Example19 {
+
+	
+}
+
+
+class Outer{
+	int m=0;
+	void t1(){
+		System.out.println("outer.t1 method");
+	}
+	
+	
+	void t2(){
+		int n=2;
+		class inner{
+			void t2(){
+				System.out.println("inner.t2.method");
+			}
+		}
+		
+		Inner i=new Inner();
+	}
+}

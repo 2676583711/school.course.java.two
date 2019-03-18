@@ -1,0 +1,12 @@
+package cn.zhou.stream.accidence;
+
+public class Example19 {
+
+	
+}
+
+
+class Outer{
+	int m=0;
+	
+}
