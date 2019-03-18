@@ -1,0 +1,12 @@
+public class Example15 {
+
+	public static void main(String[] args) {
+
+	}
+}
+
+abstract class Animal {
+	//final int a = 5;
+
+	public abstract void shout();
+}
