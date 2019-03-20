@@ -1,0 +1,52 @@
+package cn.zhou.stream.accidence;
+
+public class Example19 {
+
+	public static void main(String[] args) {
+		Outer o = new Outer();
+		o.t1();
+		o.t2();
+	}
+}
+
+class Outer {
+	int m = 0;
+
+	void t1() {
+		System.out.println("outer.t1 method");
+	}
+
+	void t2() {
+
+		int n = 2;
+
+		class Inner {
+			// public String n;
+
+			// public static final String n = null;
+
+			void t2() {
+				System.out.println("inner.t2.method");
+
+				t1();
+
+				System.out.println("n=-+" + n);
+			}
+		}
+
+		Inner i = new Inner();
+		// System.out.println("n="+i.n);
+		i.t2();
+	}
+
+	static class Inner {
+		// public String n;
+
+		// public static final String n = null;
+
+		void t2() {
+			System.out.println("inner.t2.method");
+
+ 		}
+	}
+}

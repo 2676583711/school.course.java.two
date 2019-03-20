@@ -17,7 +17,9 @@ class Outer {
 	}
 
 	void t2() {
+
 		int n = 2;
+
 		class Inner {
 			// public String n;
 
@@ -25,11 +27,23 @@ class Outer {
 
 			void t2() {
 				System.out.println("inner.t2.method");
+
+				t1();
+
+				System.out.println("n=-+" + n);
 			}
 		}
 
 		Inner i = new Inner();
 		// System.out.println("n="+i.n);
 		i.t2();
+		new Outer.I2().t2();
 	}
+
+	static class I2 {
+		  void t2() {
+			System.out.println("≥…‘±class");
+		}
+	}
+	
 }
