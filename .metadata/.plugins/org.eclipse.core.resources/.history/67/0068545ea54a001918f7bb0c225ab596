@@ -29,7 +29,7 @@ class Outer {
 		}
 
 		Inner i = new Inner();
-		// System.out.println("n="+i.n);
-		i.t2();
+		System.out.println("n=" + i.n);
+		// i.t2();
 	}
 }
