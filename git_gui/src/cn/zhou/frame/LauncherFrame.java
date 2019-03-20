@@ -5,6 +5,9 @@ import java.io.IOException;
 
 import javax.swing.JFrame;
 
+import org.eclipse.jgit.api.Git;
+
+import cn.zhou.git.repository.GitRepository;
 import cn.zhou.panel.FirstPanel;
 
 /*
@@ -27,7 +30,9 @@ public class LauncherFrame {
 		// 添加firstPanel
 		jf.add(new FirstPanel());
 
-		runShell();
+		// runShell();
+
+		git();
 
 	}
 
@@ -35,16 +40,17 @@ public class LauncherFrame {
 		ProcessBuilder processBuilder = new ProcessBuilder();
 		processBuilder.directory(new File("/home/zhou/workspace/git_gui"));
 		try {
-			Process process = processBuilder.command("/usr/bin/gnome-terminal;git version").start();
-			
-			//Process process = processBuilder.command("git init").start();
+			Process process = processBuilder.command(
+					"/usr/bin/gnome-terminal;git version").start();
 
-//			List<String> list = new ArrayList<String>();
-//			list.add("/usr/bin/gnome-terminal");
-//			list.add("git status");
-//			list.add("git log");
-//
-//			processBuilder.command(list).start();
+			// Process process = processBuilder.command("git init").start();
+
+			// List<String> list = new ArrayList<String>();
+			// list.add("/usr/bin/gnome-terminal");
+			// list.add("git status");
+			// list.add("git log");
+			//
+			// processBuilder.command(list).start();
 			process.getInputStream().read("git status".getBytes());
 			process.getOutputStream().write("git status".getBytes());
 
@@ -57,18 +63,24 @@ public class LauncherFrame {
 	public static void main(String[] args) { // 主方法，用于启动项目
 		new LauncherFrame();
 
-//		try {
-//
-//			Process process = Runtime.getRuntime().exec("/usr/bin/gnome-terminal");
-//			process.getInputStream().read("cd /home/zhou".getBytes()); // 读
-//
-//			OutputStream os = process.getOutputStream(); // 写入流
-//			os.write("git status".getBytes()); // 写
-//			os.flush();
-//			// os.close();
-//		} catch (IOException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
+		// try {
+		//
+		// Process process =
+		// Runtime.getRuntime().exec("/usr/bin/gnome-terminal");
+		// process.getInputStream().read("cd /home/zhou".getBytes()); // 读
+		//
+		// OutputStream os = process.getOutputStream(); // 写入流
+		// os.write("git status".getBytes()); // 写
+		// os.flush();
+		// // os.close();
+		// } catch (IOException e) {
+		// // TODO Auto-generated catch block
+		// e.printStackTrace();
+		// }
 	}
+
+	public void git() {
+		Git git = new Git(new GitRepository());
+	}
+
 }
