@@ -3,7 +3,7 @@ package cn.zhou.stream.accidence;
 public class Example19 {
 
 	public static void main(String[] args) {
-		Outer o  = new Outer();
+		Outer o; //= new Outer();
 		o.t1();
 		o.t2();
 	}
