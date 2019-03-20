@@ -10,10 +10,10 @@ public class Example21 {
 		 } catch (Exception e) {
 			 System.out.println(e.getMessage());
 			 return;
-		 }finally{
+		 }
 
 		System.out.println("go on.........");
-		}
+		//}
 	}
 
 	public static int divide(int x, int y) {
