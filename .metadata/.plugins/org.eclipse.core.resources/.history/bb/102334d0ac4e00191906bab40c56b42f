@@ -3,7 +3,7 @@ public class Example31 {
 		return x / y;
 	}
 	
-public void finalize()  { //throws Throwable
+protected void finalize() throws Throwable {
 	System.out.println("finalize() is runing......");
 };
 
@@ -24,6 +24,7 @@ public void finalize()  { //throws Throwable
 			System.out.println("dibvide=" + divide(5, 0));
 		 
 		} catch (Exception e) {  //catch (MySelfException e) {
+			//throw new MySelfException("不能為0");
 			 e.printStackTrace();
 			//throw new MySelfException("不能為0");
 		}
