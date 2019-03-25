@@ -1,0 +1,22 @@
+public class Example31 {
+	public static int divide(int x, int y) throws Exception {
+		return x / y;
+	}
+
+	public static void main(String[] args) {
+		try {
+			System.out.println("dibvide=" + divide(5, 0));
+		} catch (MySelfException e) {
+			
+			try {
+				throw new MySelfException("²»ÄÜžé0");
+			} catch (MySelfException e1) {
+				e1.printStackTrace();
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		// System.out.println("dibvide="+divide(5,0));
+
+	}
+}

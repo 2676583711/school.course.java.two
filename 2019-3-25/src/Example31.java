@@ -1,17 +1,17 @@
 public class Example31 {
-
 	public static int divide(int x, int y) throws Exception {
 		return x / y;
 	}
 
-	public static void main(String[] args) throws Exception {
+	public static void main(String[] args) throws MySelfException { // throws MySelfException
 		try {
 			System.out.println("dibvide=" + divide(5, 0));
-		} catch (MySelfException e) {
-			// e.printStackTrace();
+		 
+		} catch (Exception e) {  //catch (MySelfException e) {
+			//throw new MySelfException("不能為0");
+			//e.printStackTrace();
 			throw new MySelfException("不能為0");
 		}
-		System.out.println();
 		// System.out.println("dibvide="+divide(5,0));
 
 	}
