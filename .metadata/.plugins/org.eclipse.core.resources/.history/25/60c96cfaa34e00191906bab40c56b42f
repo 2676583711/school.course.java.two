@@ -1,0 +1,9 @@
+
+public class Example31 {
+	
+	public static int divide(int x,int y)throws Exception{
+		return x/y;
+		
+	}
+
+}
