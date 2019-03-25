@@ -1,0 +1,32 @@
+import java.io.PrintStream;
+import java.io.PrintWriter;
+
+
+public class MySelfException extends Exception {
+
+	public MySelfException() {
+		super();
+	}
+
+	public MySelfException(String message, Throwable cause,
+			boolean enableSuppression, boolean writableStackTrace) {
+		super(message, cause, enableSuppression, writableStackTrace);
+	}
+
+	public MySelfException(String message, Throwable cause) {
+		super(message, cause);
+	}
+
+	public MySelfException(String message) {
+		super(message);
+	}
+
+	public MySelfException(Throwable cause) {
+		super(cause);
+	}
+
+	 
+	 
+	 
+	 
+}
