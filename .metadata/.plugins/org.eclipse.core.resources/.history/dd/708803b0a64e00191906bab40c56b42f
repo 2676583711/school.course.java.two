@@ -11,7 +11,7 @@ public class Example31 {
 		} catch (Exception e) {
  			e.printStackTrace();
 		}
-		System.out.println();
+		
 		//System.out.println("dibvide="+divide(5,0));
 
 	}
