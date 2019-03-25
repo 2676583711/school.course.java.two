@@ -14,10 +14,8 @@ public void finalize()  { //throws Throwable
 		Runtime.getRuntime().gc();
 		System.out.println("e"+e);
 		
-		int i=0;
 		while(i<10){
-			System.out.println("No"+i);
-			i++;
+			i++
 		}
 		
 	}
