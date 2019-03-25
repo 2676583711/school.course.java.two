@@ -10,8 +10,7 @@ protected void finalize() throws Throwable {
 	public static void recy(){
 		Example31 e =new Example31();
 		e=null;
-		//System.gc();
-		Runtime.getRuntime().gc();
+		System.gc();
 		System.out.println("e"+e);
 		
 	}
@@ -20,7 +19,6 @@ protected void finalize() throws Throwable {
 			
 			recy();
 			System.out.println("*/*/**/*///**/*//");
-			recy();
 			System.out.println("dibvide=" + divide(5, 0));
 		 
 		} catch (Exception e) {  //catch (MySelfException e) {

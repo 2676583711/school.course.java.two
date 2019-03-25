@@ -2,25 +2,14 @@ public class Example31 {
 	public static int divide(int x, int y) throws Exception {
 		return x / y;
 	}
-	
-protected void finalize() throws Throwable {
-	System.out.println("finalize() is runing......");
-};
 
 	public static void recy(){
 		Example31 e =new Example31();
-		e=null;
-		//System.gc();
-		Runtime.getRuntime().gc();
-		System.out.println("e"+e);
-		
 	}
 	public static void main(String[] args)   { // throws MySelfException
 		try {
 			
-			recy();
-			System.out.println("*/*/**/*///**/*//");
-			recy();
+			System.gc();
 			System.out.println("dibvide=" + divide(5, 0));
 		 
 		} catch (Exception e) {  //catch (MySelfException e) {

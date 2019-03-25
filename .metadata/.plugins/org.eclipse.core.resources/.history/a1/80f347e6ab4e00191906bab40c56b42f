@@ -9,17 +9,14 @@ protected void finalize() throws Throwable {
 
 	public static void recy(){
 		Example31 e =new Example31();
-		e=null;
-		//System.gc();
-		Runtime.getRuntime().gc();
+		  e=null;
+		System.gc();
 		System.out.println("e"+e);
 		
 	}
 	public static void main(String[] args)   { // throws MySelfException
 		try {
 			
-			recy();
-			System.out.println("*/*/**/*///**/*//");
 			recy();
 			System.out.println("dibvide=" + divide(5, 0));
 		 
