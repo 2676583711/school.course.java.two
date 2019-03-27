@@ -1,0 +1,12 @@
+public class TestRuntime {
+
+	public static void main(String[] args) {
+
+		Runtime rt = Runtime.getRuntime();
+		//
+		System.out.println();
+
+		Process p = rt.exec("notepad.exe");
+
+	}
+}

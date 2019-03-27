@@ -1,0 +1,26 @@
+import java.io.IOException;
+
+public class TestRuntime {
+
+	public static void main(String[] args) {
+
+		Runtime rt = Runtime.getRuntime();
+		//
+		System.out.println();
+
+		try {
+			Process p = rt.exec("notepad.exe");
+
+			Thread.sleep(3000);
+			
+
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
+}
