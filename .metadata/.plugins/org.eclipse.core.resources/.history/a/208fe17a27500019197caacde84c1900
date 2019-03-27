@@ -1,0 +1,10 @@
+public class StringUtil {
+
+	public static void main(String[] args) {
+		String str = "java";
+		char[] ch = str.toCharArray();
+		for (int i; i < ch.length; i++) {
+
+		}
+	}
+}
