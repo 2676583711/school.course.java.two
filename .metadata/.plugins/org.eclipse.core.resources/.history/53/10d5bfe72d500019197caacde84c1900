@@ -21,6 +21,5 @@ public class StringUtil {
 		System.out.println(a.length() + ":" + b.length);
 		// ////////***********************************************//**///**/*//*EEESSEEEEEEEee
 
-		
 	}
 }

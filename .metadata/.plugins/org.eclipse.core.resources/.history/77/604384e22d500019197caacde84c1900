@@ -19,8 +19,6 @@ public class StringUtil {
 
 		System.out.println("a.valueof()=" + a);
 		System.out.println(a.length() + ":" + b.length);
-		// ////////***********************************************//**///**/*//*EEESSEEEEEEEee
 
-		
 	}
 }
