@@ -36,12 +36,10 @@ public class WrapperClass {
 		
 	}
 	public void testCalendar(){
-		System.out.println("**********************************************");
-
+		
 		//calendar类是抽象類的，无法使用new关键字实例化
 		Calendar instance = Calendar.getInstance();
 		
-		instance.set(Calendar.ZONE_OFFSET, 0);
 		//获取时间
 		System.out.println("instance.getTime()=="+instance.getTime());
 		//获取时间
@@ -59,7 +57,6 @@ public class WrapperClass {
 		//获取时间
 		System.out.println("instance.DAY_OF_YEAR=="+instance.DAY_OF_YEAR);
 		
-	
 		
 	}
 }
