@@ -1,0 +1,32 @@
+package test_math_class;
+
+import java.util.Date;
+
+/*
+ * 包装类
+ * 基本數據類型
+ */
+public class WrapperClass {
+
+	public static void main(String[] args) {
+		testDate();
+	}
+	
+	public void testDate(){
+		
+		Date  d1= new Date();
+		
+		Date d2 = new Date(System.currentTimeMillis());
+		
+		Date  d3= new Date(100);
+		System.out.println("d1:"+d1);//d1:Mon Apr 01 10:52:00 CST 2019
+		System.out.println("d2:"+d2);//	d2:Mon Apr 01 10:52:00 CST 2019
+	
+		
+		System.out.println("d3:"+d3); //d3:Thu Jan 01 08:00:00 CST 1970
+		
+	}
+	public void testCalendar(){
+		
+	}
+}

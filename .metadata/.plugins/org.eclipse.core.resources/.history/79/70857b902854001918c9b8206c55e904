@@ -1,0 +1,12 @@
+package test_math_class;
+
+/*
+ * 包装类
+ * 基本數據類型
+ */
+public class WrapperClass {
+
+	public static void main(String[] args) {
+		
+	}
+}

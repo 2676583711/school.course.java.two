@@ -15,5 +15,13 @@ public class TestMath {
 		System.out.println("nextInt:" + r.nextInt());
 		System.out.println("nextInt(10):" + r.nextInt(10));
 		System.out.println("nextLong:" + r.nextLong());
+		/*
+		 * 	boolean:false
+			double:0.27207496277291676
+			float:0.20786625
+			nextInt:126264923
+			nextInt(10):0
+			nextLong:6631535658886787120
+		 */
 	}
 }

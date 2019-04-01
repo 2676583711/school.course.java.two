@@ -1,0 +1,19 @@
+package test_math_class;
+
+import java.util.Date;
+
+/*
+ * 包装类
+ * 基本數據類型
+ */
+public class WrapperClass {
+
+	public static void main(String[] args) {
+		
+		Date d2 = new Date(System.currentTimeMillis());
+		
+		System.out.println("d1:"+d1);
+		System.out.println("d1:"+d2);
+		
+	}
+}
