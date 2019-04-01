@@ -43,20 +43,15 @@ public class WrapperClass {
 		//获取时间
 		System.out.println("instance.getTime()=="+instance.getTime());
 		//获取时间
-		System.out.println("instance.YEAR=="+instance.YEAR);
+		System.out.println("instance.getTime()=="+instance.YEAR);
 		//获取时间
-		System.out.println("instance.MONTH=="+instance.MONTH);
+		System.out.println("instance.getTime()=="+instance.MONTH);
 		//获取时间
-		System.out.println("instance.DATE=="+instance.DATE);
+		System.out.println("instance.getTime()=="+instance.getTime());
 		//获取时间
-		System.out.println("instance.DAY_OF_MONTH=="+instance.DAY_OF_MONTH);
+		System.out.println("instance.getTime()=="+instance.getTime());
 		//获取时间
-		System.out.println("instance.DAY_OF_WEEK=="+instance.DAY_OF_WEEK);
-		//获取时间
-		System.out.println("instance.DAY_OF_WEEK_IN_MONTH=="+instance.DAY_OF_WEEK_IN_MONTH);
-		//获取时间
-		System.out.println("instance.DAY_OF_YEAR=="+instance.DAY_OF_YEAR);
-		
+		System.out.println("instance.getTime()=="+instance.getTime());
 		
 	}
 }

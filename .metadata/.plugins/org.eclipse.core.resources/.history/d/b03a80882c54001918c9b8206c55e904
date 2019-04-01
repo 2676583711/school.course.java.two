@@ -55,7 +55,7 @@ public class WrapperClass {
 		//获取时间
 		System.out.println("instance.DAY_OF_WEEK_IN_MONTH=="+instance.DAY_OF_WEEK_IN_MONTH);
 		//获取时间
-		System.out.println("instance.DAY_OF_YEAR=="+instance.DAY_OF_YEAR);
+		System.out.println("instance.getTime()=="+instance.DAY_OF_YEAR);
 		
 		
 	}
