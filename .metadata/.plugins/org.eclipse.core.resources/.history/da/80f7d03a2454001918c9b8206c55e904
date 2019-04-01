@@ -1,0 +1,19 @@
+package test_math_class;
+
+import java.util.Random;
+
+public class TestMath {
+
+	public static void main(String[] args) {
+
+		Random r = new Random();
+
+		System.out.println("boolean:"+r.nextBoolean());
+
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+	}
+}

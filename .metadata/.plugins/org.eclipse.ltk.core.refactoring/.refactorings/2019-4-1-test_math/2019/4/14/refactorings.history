@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Extract local variable &apos;random&apos; from expression &apos;new Random()&apos;&#x0D;&#x0A;- Original project: &apos;test_math_class&apos;&#x0D;&#x0A;- Variable name: &apos;random&apos;&#x0D;&#x0A;- Destination method: &apos;test_math_class.TestMath.main()&apos;&#x0D;&#x0A;- Variable expression: &apos;new Random()&apos;&#x0D;&#x0A;- Replace occurrences of expression with variable" description="Extract local variable &apos;random&apos;" final="false" id="org.eclipse.jdt.ui.extract.temp" input="/src&lt;test_math_class{TestMath.java" name="random" replace="true" selection="108 0" stamp="1554084939930" version="1.0"/>
+</session>

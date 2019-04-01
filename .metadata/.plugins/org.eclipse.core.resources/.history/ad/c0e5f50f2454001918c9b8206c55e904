@@ -1,0 +1,12 @@
+package test_math_class;
+
+import java.util.Random;
+
+public class TestMath {
+
+	public static void main(String[] args) {
+
+		Random random = new Random();
+		
+	}
+}
