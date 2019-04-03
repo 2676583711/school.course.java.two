@@ -6,3 +6,5 @@
 1554253056981	Move file
 1554253062025	Delete element
 1554253480926	Extract local variable 'fileReader'
+1554254754625	Extract local variable 'file'
+1554255088118	Extract local variable 'fileRead'
