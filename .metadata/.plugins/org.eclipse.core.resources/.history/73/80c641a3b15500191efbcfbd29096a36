@@ -37,12 +37,12 @@ public class TestFileInputStream {
 
 			// /***********************************
 
-			byte[] p = new byte[1024];
+			byte[] p = new byte[1024 * 10];
 
 			FileInputStream f2 = new FileInputStream(new File("a.jpg"));
 			FileOutputStream f3 = new FileOutputStream(("pic/j.jpg"));
 
-			while (f2.read(p) != -1) {
+			while (f2.read() != -1) {
 				f2.read(p);
 
 				f3.write(f2.read());
@@ -55,7 +55,7 @@ public class TestFileInputStream {
 			f2.read(p);
 			f3.write(p, 0, p.length);
 			f3.flush();
-
+			
 			f2.close();
 			f3.close();
 
