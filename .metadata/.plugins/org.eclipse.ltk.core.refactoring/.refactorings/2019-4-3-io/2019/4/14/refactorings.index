@@ -1,0 +1,8 @@
+1554252390740	Extract local variable 'fileInputStream'
+1554252446205	Rename resource 'a'
+1554252550256	Copy file
+1554252564251	Delete element
+1554252894729	Extract local variable 'fileOutputStream'
+1554253056981	Move file
+1554253062025	Delete element
+1554253480926	Extract local variable 'fileReader'

@@ -1,0 +1,18 @@
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+
+public class TestFileInputStream {
+
+	public static void main(String[] args) {
+
+		try {
+			FileInputStream fileInputStream = new FileInputStream("a.txt");
+			int b = 0;
+			while ((b = fileInputStream.read()) != -1) {
+				
+			}
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+	}
+}
