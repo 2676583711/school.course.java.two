@@ -13,7 +13,7 @@ public class TestFileInputStream {
 					"a.txt"));
 			int b = 0;
 			while ((b = fileInputStream.read()) != -1) {
-				System.out.println((char) b);
+				System.out.println(b);
 			}
 
 			byte[] s = new byte[1024];
@@ -33,13 +33,11 @@ public class TestFileInputStream {
 			fileOutputStream.close();
 
 			// /***********************************
-			byte[] p = new byte[1024];
 			FileInputStream f2 = new FileInputStream(new File("a.jpg"));
-			f2.read(p);
+			byte[] p = new byte[1024];
 
 			FileOutputStream f3 = new FileOutputStream(new File("pic"), true);
-			f3.write(p);
-
+			f3.write();
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		} catch (IOException e) {

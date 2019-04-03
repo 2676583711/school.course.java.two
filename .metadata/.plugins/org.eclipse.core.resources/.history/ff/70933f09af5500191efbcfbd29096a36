@@ -37,7 +37,7 @@ public class TestFileInputStream {
 			FileInputStream f2 = new FileInputStream(new File("a.jpg"));
 			f2.read(p);
 
-			FileOutputStream f3 = new FileOutputStream(new File("pic"), true);
+			FileOutputStream f3 = new FileOutputStream(new File(), true);
 			f3.write(p);
 
 		} catch (FileNotFoundException e) {
