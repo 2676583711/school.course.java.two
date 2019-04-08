@@ -1,0 +1,10 @@
+import java.io.BufferedInputStream;
+
+
+public class TestBufferedInputStream {
+
+	public static void main(String[] args) {
+		BufferedInputStream bufferedInputStream = 
+				new BufferedInputStream("a.jpg");
+	}
+}

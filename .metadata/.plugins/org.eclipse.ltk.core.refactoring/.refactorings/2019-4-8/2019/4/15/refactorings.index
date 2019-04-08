@@ -1,0 +1,3 @@
+1554690093757	Extract local variable 'bufferedInputStream'
+1554690291537	Extract local variable 'currentTimeMillis'
+1554690405398	Extract local variable 'bufferedOutputStream'

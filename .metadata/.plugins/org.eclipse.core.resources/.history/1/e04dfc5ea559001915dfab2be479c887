@@ -1,0 +1,16 @@
+import java.io.BufferedInputStream;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+
+public class TestBufferedInputStream {
+
+	public static void main(String[] args) {
+		try {
+			BufferedInputStream bufferedInputStream = new BufferedInputStream(
+					new FileInputStream("a.jpg"));
+			
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+	}
+}
