@@ -74,8 +74,7 @@ public class TestBufferedInputStream {
 
 			System.out.println("canRead()=" + new File("t.txt").canRead());
 
-			System.out
-					.println("createNewFile()=" + new File("ab.txt").createNewFile());
+			System.out.println("canRead()=" + new File("a.txt").canRead());
 
 		} catch (IOException e) {
 

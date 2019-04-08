@@ -73,10 +73,6 @@ public class TestBufferedInputStream {
 					+ bufferedReader.readLine());
 
 			System.out.println("canRead()=" + new File("t.txt").canRead());
-
-			System.out
-					.println("createNewFile()=" + new File("ab.txt").createNewFile());
-
 		} catch (IOException e) {
 
 			e.printStackTrace();
