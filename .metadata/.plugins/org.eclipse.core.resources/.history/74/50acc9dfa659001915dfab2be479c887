@@ -20,9 +20,10 @@ public class TestBufferedInputStream {
 
 			long ct1 = System.currentTimeMillis();
 
-			while (bufferedInputStream.read(len) != -1) {
+			while (bufferedInputStream.read() != -1) {
 
 				bufferedOutputStream.write(len);
+				bufferedOutputStream.flush();
 			}
 			long ct2 = System.currentTimeMillis();
 
