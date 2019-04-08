@@ -4,3 +4,5 @@
 1554691562030	Extract local variable 'fileWriter'
 1554692057293	Extract local variable 'fileReader'
 1554692618460	Extract local variable 'bufferedReader'
+1554694294117	Extract local variable 'file'
+1554694320506	Extract local variable 'list'

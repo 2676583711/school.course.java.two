@@ -1,0 +1,100 @@
+import java.io.BufferedInputStream;
+import java.io.BufferedOutputStream;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class TestBufferedInputStream {
+
+	public static void main(String[] args) {
+		try {
+			BufferedInputStream bufferedInputStream = new BufferedInputStream(
+					new FileInputStream("a.jpg"));
+
+			BufferedOutputStream bufferedOutputStream = new BufferedOutputStream(
+					new FileOutputStream("pic/t2.jpg"));
+
+			int len = 0;
+			// byte[] len = new byte[1024 * 2];
+
+			long ct1 = System.currentTimeMillis();
+
+			while ((len = bufferedInputStream.read()) != -1) {
+
+				// while (bufferedInputStream.read(len) != -1) {
+
+				bufferedOutputStream.write(len);
+				bufferedOutputStream.flush();
+
+			}
+			long ct2 = System.currentTimeMillis();
+
+			System.out.println("cast time:" + (ct2 - ct1));
+
+			bufferedInputStream.close();
+			bufferedOutputStream.close();
+
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+		// ****************************************************/*/**/*//*
+
+		try {
+			FileWriter fileWriter = new FileWriter("t.txt");
+
+			FileReader fileReader = new FileReader("t.txt");
+
+			fileWriter.write("how are you");
+			fileWriter.write("\n");
+
+			fileWriter.write("fine ");
+			fileWriter.write("\n");
+
+			fileWriter.write("thank you");
+			fileWriter.write("\n");
+
+			fileWriter.write("and you");
+			fileWriter.write("\n");
+			fileWriter.close();
+
+			// new File("t.txt").createNewFile();
+			System.out.println("fileReader.read()=" + (char) fileReader.read());
+
+			BufferedReader bufferedReader = new BufferedReader(fileReader);
+			System.out.println("bufferedReader.readLine()="
+					+ bufferedReader.readLine());
+
+			System.out.println("canRead()=" + new File("t.txt").canRead());
+
+			System.out.println("createNewFile()="
+					+ new File("ab.txt").createNewFile());
+
+		} catch (IOException e) {
+
+			e.printStackTrace();
+		}
+
+		/**********************************************************
+		 * 
+		 * 
+		 */
+		File file = new File("a/b/c/d/e/f/g/h");
+		// file.mkdirs();
+
+		String[] list = file.list();
+
+		for (String s : list) {
+			System.out.println("list=" + list.toString());
+		}
+		System.out.println("list=" + (String) list);
+
+	}
+}

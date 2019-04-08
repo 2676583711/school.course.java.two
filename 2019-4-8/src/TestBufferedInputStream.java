@@ -74,12 +74,30 @@ public class TestBufferedInputStream {
 
 			System.out.println("canRead()=" + new File("t.txt").canRead());
 
-			System.out
-					.println("createNewFile()=" + new File("ab.txt").createNewFile());
+			System.out.println("createNewFile()="
+					+ new File("ab.txt").createNewFile());
 
 		} catch (IOException e) {
 
 			e.printStackTrace();
 		}
+
+		/**********************************************************
+		 * 
+		 * 
+		 */
+		File file = new File("a/b/c/d/e/f/g/h");
+		// file.mkdirs();
+
+		String[] list = file.list();
+
+		for (String s : list) {
+			System.out.println("list=" + list.toString());
+		}
+
+		for (int i = 0; i < list.length; i++) {
+			System.out.println("list=" + list[i]);
+		}
+
 	}
 }
