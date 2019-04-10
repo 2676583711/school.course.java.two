@@ -35,7 +35,7 @@ public class Example extends Thread implements Runnable {
 		//***********************************
 		new Example().start();  
 		
-		new Thread(new Example(),"example").start();
+		new Thread(new Example()).start();
 		
 		new Example().shout();  
 		
