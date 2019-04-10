@@ -1,0 +1,25 @@
+/*
+ * 
+ * java 多线程，测试，使用，学习
+ */
+
+public class Example extends Thread {
+	
+	public void run() { //重寫thread類的run方法實現多線程
+		
+		for(int i=0;i<=10;i++){
+			System.out.println("卖第："+i+"张票");
+		}
+		
+	}
+	public static void main(String[] args) {
+		
+		new Example().start();
+		
+		for(int i=0;i<=10;i++){
+			System.out.println("报数："+i);
+		}
+		
+		
+	}
+}

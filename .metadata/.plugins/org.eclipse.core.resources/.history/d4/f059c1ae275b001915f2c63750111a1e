@@ -1,0 +1,16 @@
+/*
+ * 
+ * java 多线程，测试，使用，学习
+ */
+
+public class Example extends Thread {
+	public void run() {
+		
+	}
+	public static void main(String[] args) {
+		
+		for(int i=0;i<=10;i++){
+			System.out.println("报数："+i);
+		}
+	}
+}
