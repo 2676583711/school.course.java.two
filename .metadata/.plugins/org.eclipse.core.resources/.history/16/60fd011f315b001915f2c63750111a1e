@@ -40,9 +40,7 @@ public class Example implements Callable {//Runnable,  extends Thread
 //		new Thread(new Example(),"example").start();
 		
 		try {
-			Object call = new Example().call();
-			System.out.println("call="+call);
-			
+			new Example().call();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

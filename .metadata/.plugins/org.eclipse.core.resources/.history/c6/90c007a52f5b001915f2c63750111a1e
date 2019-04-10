@@ -5,16 +5,16 @@ import java.util.concurrent.Callable;
  * java 多线程，测试，使用，学习
  */
 
-public class Example implements Callable {//Runnable,  extends Thread
+public class Example extends Thread implements Runnable,Callable {
 	
-//	@Override
-//	public void run() { //重寫thread類的run方法實現多線程
-//		
-//		for(int i=0;i<=10;i++){
-//			System.out.println("卖第："+i+"张票");
-//		}
-//		
-//	}
+	@Override
+	public void run() { //重寫thread類的run方法實現多線程
+		
+		for(int i=0;i<=10;i++){
+			System.out.println("卖第："+i+"张票");
+		}
+		
+	}
 	
 	public void shout(){
 		for(int i=0;i<=20;i++){
@@ -35,17 +35,10 @@ public class Example implements Callable {//Runnable,  extends Thread
 		 */
 		
 		//***********************************
-//		new Example().start();  
-//		
-//		new Thread(new Example(),"example").start();
+		new Example().start();  
 		
-		try {
-			Object call = new Example().call();
-			System.out.println("call="+call);
-			
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+		new Thread(new Example(),"example").start();
+		
 		new Example().shout();  
 		
 		/*
@@ -65,7 +58,7 @@ public class Example implements Callable {//Runnable,  extends Thread
 	public Object call() throws Exception {
 		//shout();
 		for(int i=0;i<=20;i++){
-			System.out.println("报110数："+i);
+			System.out.println("报数："+i);
 		}
 		return null;
 	}
