@@ -1,0 +1,16 @@
+package cn.zhou.work;
+
+public class P103_5 {
+
+	public static void main(String[] args) {
+		
+	}
+}
+
+
+class Student {
+	private String name;
+	private int score;
+	
+	
+}
