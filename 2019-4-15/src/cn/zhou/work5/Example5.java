@@ -1,0 +1,6 @@
+package cn.zhou.work5;
+
+public class Example5 {
+
+	main
+}

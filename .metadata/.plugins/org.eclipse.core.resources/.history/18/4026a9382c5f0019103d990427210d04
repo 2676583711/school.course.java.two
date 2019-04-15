@@ -1,0 +1,12 @@
+package cn.zhou.work4;
+
+public class Example4 {
+
+	public static void main(String[] args) {
+		String s="HelloWorld";
+		String string = s=s.toCharArray();
+		for(int i=s.length();i>=0;i--){
+			System.out.println(i);
+		}
+	}
+}

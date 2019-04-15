@@ -1,0 +1,32 @@
+package cn.zhou.work3;
+
+public class Example3 {
+
+	
+}
+
+
+interface Shape{
+	public double area(double x);
+}
+
+
+class Square implements Shape{
+
+	@Override
+	public double area(double x) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	
+}
+
+//求圓形的面積
+class Circle implements Shape{
+
+	@Override
+	public double area(double x) {
+		return 0;
+	}
+	
+}

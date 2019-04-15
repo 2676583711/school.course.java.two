@@ -1,0 +1,13 @@
+package cn.zhou.work3;
+
+public class Example3 {
+
+	
+}
+
+
+interface Shape{
+	public double area(double x);
+}
+
+

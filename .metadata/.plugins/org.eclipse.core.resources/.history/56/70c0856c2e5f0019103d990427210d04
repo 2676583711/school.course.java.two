@@ -1,0 +1,23 @@
+package cn.zhou.work4;
+
+public class Example4 {
+
+	public static void main(String[] args) {
+		String s="HelloWorld";
+		
+		char[]c = s.toCharArray();
+		 
+		 
+		 for(char c2:c){
+			 if(Character.isUpperCase(c2)){
+				  
+
+
+			 }
+			 System.out.println(c2);
+		 }
+		
+		 
+	}
+}
+ 

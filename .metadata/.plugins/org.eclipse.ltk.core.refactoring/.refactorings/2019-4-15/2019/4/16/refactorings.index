@@ -5,3 +5,6 @@
 1555296511187	Extract local variable 'stuent'
 1555296560829	Extract local variable 'student'
 1555296588448	Extract local variable 'underGraduate'
+1555297329343	Extract local variable 'square'
+1555297350265	Extract local variable 'circle'
+1555297901441	Extract local variable 'string'
