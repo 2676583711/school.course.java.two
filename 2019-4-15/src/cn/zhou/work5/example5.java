@@ -1,20 +1,12 @@
 package cn.zhou.work5;
 
-import java.io.BufferedInputStream;
-import java.io.BufferedOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
-import java.io.FileWriter;
 import java.io.IOException;
 
-/**
- * 
- * @author zhou
- *
- */
-public class Example5 {
+public class example5 {
 
 	public static void main(String[] args) {
 
@@ -26,13 +18,9 @@ public class Example5 {
 
 			byte[] b = new byte[1024];
 
-			BufferedInputStream bis = new BufferedInputStream(fis);
-			BufferedOutputStream bos = new BufferedOutputStream(fos);
-
-			while (bis.read(b) != -1) {
-				// fos.write(b);
-				bos.write(b);
-				bos.flush();
+			while (fis.read(b) != -1) {
+				fos.write(b);
+				fos.flush();
 			}
 			fis.close();
 			fos.close();
