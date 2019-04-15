@@ -1306,3 +1306,18 @@ Java Model Exception: Java Model Status [<project root> [in 2019-4-15] is not on
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 !SUBENTRY 1 org.eclipse.jdt.core 4 1006 2019-04-15 09:57:17.478
 !MESSAGE <project root> [in 2019-4-15] is not on its project's build path
+
+!ENTRY org.eclipse.equinox.security 1 0 2019-04-15 09:59:26.659
+!MESSAGE New keyring password generated. 
+
+!ENTRY org.eclipse.egit.core 4 0 2019-04-15 09:59:28.235
+!MESSAGE An exception occurred during push on URI https://github.com/2676583711/school.course.java.two.git: https://github.com/2676583711/school.course.java.two.git: not authorized
+!STACK 0
+org.eclipse.jgit.errors.TransportException: https://github.com/2676583711/school.course.java.two.git: not authorized
+	at org.eclipse.jgit.transport.TransportHttp.connect(TransportHttp.java:501)
+	at org.eclipse.jgit.transport.TransportHttp.openPush(TransportHttp.java:399)
+	at org.eclipse.jgit.transport.PushProcess.execute(PushProcess.java:154)
+	at org.eclipse.jgit.transport.Transport.push(Transport.java:1173)
+	at org.eclipse.egit.core.op.PushOperation.run(PushOperation.java:197)
+	at org.eclipse.egit.ui.internal.push.ConfirmationPage$2.run(ConfirmationPage.java:206)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
