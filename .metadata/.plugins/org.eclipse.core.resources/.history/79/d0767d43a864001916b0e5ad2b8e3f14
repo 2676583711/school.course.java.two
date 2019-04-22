@@ -10,11 +10,11 @@ public class example5 {
 
 	public static void main(String[] args) {
 
-		File file = new File("c:\\test.txt");
+		File file = new File("/home/zhou/test.txt");
 
 		try {
 			FileInputStream fis = new FileInputStream(file);
-			FileOutputStream fos = new FileOutputStream("d:\\test.txt");
+			FileOutputStream fos = new FileOutputStream("test.txt");
 
 			byte[] b = new byte[1024];
 
