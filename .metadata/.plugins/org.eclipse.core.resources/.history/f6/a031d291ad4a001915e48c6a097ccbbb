@@ -1,7 +1,0 @@
-package cn.zhou.git.repository;
-
-import org.eclipse.jgit.lib.Repository;
-
-public class GitRepository extends Repository {
-
-}

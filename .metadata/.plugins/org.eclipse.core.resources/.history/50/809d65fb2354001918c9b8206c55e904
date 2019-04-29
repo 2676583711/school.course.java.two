@@ -1,8 +1,0 @@
-package test_math_class;
-
-public class TestMath {
-
-	public static void main(String[] args) {
-		
-	}
-}
