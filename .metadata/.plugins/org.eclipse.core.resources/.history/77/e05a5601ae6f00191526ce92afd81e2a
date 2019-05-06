@@ -34,7 +34,7 @@ public class MoveFile {
 		
 		File[] listFiles = file.listFiles();
 		
-//		System.out.println("file.list="+listFiles.toString());
+		System.out.println("file.list="+listFiles.toString());
 		
 		// 遍历文件名数组
 		for (File f2 : listFiles) {
@@ -68,21 +68,15 @@ public class MoveFile {
 						// 输出文件名及其所在的路径
 						System.out.println("p=" + Paths.get(path, f3));
 						//获取当前文件的长度
-//						int len = (int) new File(Paths.get(path, f3).toString())
-//								.length();
-						
-						//获取当前文件的长度
-						int len = (int) new File(f3).length();
-						
+						int len = (int) new File(Paths.get(path, f3).toString())
+								.length();
 						//使用字节数组装在输入流读取的数据
 						byte[] b = new byte[len];
 //						int i = fr.read(b);
 //						System.out.println("i=" + i);
-						
 						//创建字节输出流把输入流读取的文件写入目的地
 						OutputStream os = new FileOutputStream(Paths.get(
-								destination, f3.substring(beginIndex, endIndex)).toString());
-						
+								destination, f3).toString());
 						//结束文件操作之后，关闭流
 						os.write(b);
 						os.flush();

@@ -82,7 +82,6 @@ public class MoveFile {
 						//创建字节输出流把输入流读取的文件写入目的地
 						OutputStream os = new FileOutputStream(Paths.get(
 								destination, f3.substring(beginIndex, endIndex)).toString());
-						
 						//结束文件操作之后，关闭流
 						os.write(b);
 						os.flush();

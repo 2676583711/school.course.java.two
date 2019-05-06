@@ -11,7 +11,6 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
-import java.io.Reader;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
@@ -30,11 +29,11 @@ public class MoveFile {
 		// 根据文件路径创建文件对象
 		File file = getFile(path);
 		// 根据文件路径遍历文件,返回文件名数组
-//		String[] f1 = file.list();
+		String[] f1 = file.list();
 		
 		File[] listFiles = file.listFiles();
 		
-//		System.out.println("file.list="+listFiles.toString());
+		System.out.println("file.list="+listFiles.toString());
 		
 		// 遍历文件名数组
 		for (File f2 : listFiles) {
@@ -60,7 +59,8 @@ public class MoveFile {
 						//输出当前移动的文件名
 						System.out.println("f2=" + f2);
 						//输入流读取文件
-//						Reader fr = new FileInputStream(f3);
+						InputStream fr = new FileInputStream(Paths
+								.get(path, f3).toString());
 						//用一个缓冲流包装输入流，提升效率
 						BufferedReader br = new BufferedReader(new FileReader(
 								Paths.get(path, f3).toString()));
@@ -68,21 +68,15 @@ public class MoveFile {
 						// 输出文件名及其所在的路径
 						System.out.println("p=" + Paths.get(path, f3));
 						//获取当前文件的长度
-//						int len = (int) new File(Paths.get(path, f3).toString())
-//								.length();
-						
-						//获取当前文件的长度
-						int len = (int) new File(f3).length();
-						
+						int len = (int) new File(Paths.get(path, f3).toString())
+								.length();
 						//使用字节数组装在输入流读取的数据
 						byte[] b = new byte[len];
-//						int i = fr.read(b);
-//						System.out.println("i=" + i);
-						
+						int i = fr.read(b);
+						System.out.println("i=" + i);
 						//创建字节输出流把输入流读取的文件写入目的地
 						OutputStream os = new FileOutputStream(Paths.get(
-								destination, f3.substring(beginIndex, endIndex)).toString());
-						
+								destination, f3).toString());
 						//结束文件操作之后，关闭流
 						os.write(b);
 						os.flush();
