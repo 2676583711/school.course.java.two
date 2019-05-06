@@ -1,0 +1,94 @@
+package cn.zhou.work5;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+
+public class MoveFile {
+
+	public static void main(String[] args) throws IOException {
+		// 目标
+		String path = "c:";
+		// 目的的
+		String destination = "d:";
+		// 具体的移动操作
+		read(path, destination);
+	}
+
+	public static void read(String path, String destination) {
+		// 根据文件路径创建文件对象
+		File file = getFile(path);
+		// 根据文件路径遍历文件,返回文件名数组
+		String[] f1 = file.list();
+		// 遍历文件名数组
+		for (String f2 : f1) {
+			//拼接文件名及其所在路径
+			Path p = Paths.get(path, f2);
+			// 是否是文件夹
+			if (getFile(p.toString()).isDirectory()) {
+				//如果是文件夹就继续调用本方法继续遍历文件夹下面的文件
+				read(p.toString(), destination);
+			} else {
+				//不是文件夹就把文件拷贝到目的地
+				File f = getFile(destination);
+				//如果是文件夹就可能在目的地不存在，就创建
+				if (!f.exists()) {
+					f.mkdir();
+					try {
+						//输出当前移动的文件名
+						System.out.println("f2=" + f2);
+						//输入流读取文件
+						InputStream fr = new FileInputStream(Paths
+								.get(path, f2).toString());
+						//用一个缓冲流包装输入流，提升效率
+						BufferedReader br = new BufferedReader(new FileReader(
+								Paths.get(path, f2).toString()));
+						 
+						// 输出文件名及其所在的路径
+						System.out.println("p=" + Paths.get(path, f2));
+						//获取当前文件的长度
+						int len = (int) new File(Paths.get(path, f2).toString())
+								.length();
+						//使用字节数组装在输入流读取的数据
+						byte[] b = new byte[len];
+						int i = fr.read(b);
+						System.out.println("i=" + i);
+						OutputStream os = new FileOutputStream(Paths.get(
+								destination, f2).toString());
+						os.write(b);
+						os.flush();
+						os.close();
+
+					} catch (FileNotFoundException e) {
+						e.printStackTrace();
+					} catch (IOException e) {
+						e.printStackTrace();
+					}
+				}
+			}
+		}
+	}
+
+	public static boolean isDirectory(File file) {
+		// 判断是否是目录
+		boolean b = file.isDirectory();
+		// 返回判断结果，true,false
+		return b;
+	}
+
+	public static File getFile(String path) {
+		File f = new File(path);
+		return f;
+	}
+
+}

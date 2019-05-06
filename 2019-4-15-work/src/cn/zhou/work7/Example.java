@@ -69,7 +69,6 @@ class Panel extends JPanel {
 		 textArea.setMargin( new Insets(5, 5, 5, 5));
 		  textArea.setEditable(true);
 		  textArea.setSize(18, 43);
-		  textArea.set
 		 add(textArea);
 		
 		 //添加文本输入框1

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Extract local variable &apos;listFiles&apos; from expression &apos;file.listFiles()&apos;&#x0D;&#x0A;- Original project: &apos;2019-4-15-work&apos;&#x0D;&#x0A;- Variable name: &apos;listFiles&apos;&#x0D;&#x0A;- Destination method: &apos;cn.zhou.work5.MoveFile.read()&apos;&#x0D;&#x0A;- Variable expression: &apos;file.listFiles()&apos;&#x0D;&#x0A;- Replace occurrences of expression with variable" description="Extract local variable &apos;listFiles&apos;" final="false" id="org.eclipse.jdt.ui.extract.temp" input="/src&lt;cn.zhou.work5{MoveFile.java" name="listFiles" replace="true" selection="818 0" stamp="1557111892118" version="1.0"/>
+</session>
