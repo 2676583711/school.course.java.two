@@ -62,7 +62,7 @@ public class MoveFile {
 //						Reader fr = new FileInputStream(f3);
 						//用一个缓冲流包装输入流，提升效率
 						BufferedReader br = new BufferedReader(new FileReader(
-								Paths.get(path, f3 ).toString()));
+								Paths.get(path, f3.substring(3)).toString()));
 						 
 						// 输出文件名及其所在的路径
 						System.out.println("p=" + Paths.get(path, f3));
@@ -77,6 +77,7 @@ public class MoveFile {
 						byte[] b = new byte[len];
 //						int i = fr.read(b);
 //						System.out.println("i=" + i);
+						
 					 
 						//创建字节输出流把输入流读取的文件写入目的地
 						OutputStream os = new FileOutputStream(Paths.get(
