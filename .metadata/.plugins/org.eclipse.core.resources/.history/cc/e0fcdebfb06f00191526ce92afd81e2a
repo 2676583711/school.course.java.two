@@ -61,7 +61,7 @@ public class MoveFile {
 						//输入流读取文件
 //						Reader fr = new FileInputStream(f3);
 						
-						String[] split = f3.split("\\");
+						f3.split("\\");
 						//用一个缓冲流包装输入流，提升效率
 						
 						BufferedReader br = new BufferedReader(new FileReader(
